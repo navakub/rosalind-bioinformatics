@@ -1,3 +1,3 @@
 # rosalind-bioinformatics
-bioinformatics self-study  
+bioinformatics self-study__
 source: [rosalind](https://rosalind.info/problems/locations/)
