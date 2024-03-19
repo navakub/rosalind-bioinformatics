@@ -1,5 +1,4 @@
 from os import path
-from collections import Counter
 
 script_dir = path.dirname(__file__) #<-- absolute dir the script is in
 rel_path = '05-gc.fas'
@@ -18,11 +17,10 @@ with open(abs_file_path) as f:
             label = content[1:-1]
             label_list.append(label)
         else:
-            dna += content
+            dna += content.replace('\n', '')
             if i == len(contents) - 1 or contents[i+1].startswith('>'):
                 gc = 100*(dna.count('G') + dna.count('C'))/len(dna)
                 gc_list.append(gc)
-                print(dna, gc)
                 dna = ''
                 gc = 0
 
