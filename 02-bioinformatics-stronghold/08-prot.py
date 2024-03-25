@@ -15,7 +15,6 @@ with open(abs_file_path) as f:
 
 s = input('rna: ')
 
-
 protein = ''
 for i in range(0, len(s), 3):
     prot = codon2prot[s[i:i+3]]
